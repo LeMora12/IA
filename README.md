@@ -32,6 +32,23 @@ Flujo: `train_model.ipynb` genera el modelo -> `api.ipynb` lo expone -> `agent_a
 
 ```bash
 ollama pull qwen2.5:3b
+python -m pip install notebook # Jupyter Notebook, para abrir y correr los .ipynb
+python -m pip install ipykernel # kernel de Python que usa Jupyter para ejecutar las celdas
+python -m pip install pandas # limpieza y manejo del dataset (DataFrames)
+python -m pip install numpy # operaciones numericas usadas por pandas y scikit-learn
+python -m pip install scikit-learn # StandardScaler, KNeighborsClassifier, metricas, train_test_split
+python -m pip install joblib # guardar y cargar el modelo y el scaler entrenados (.pkl)
+python -m pip install fastapi # framework de la API (POST /predict)
+python -m pip install uvicorn # servidor que ejecuta la API de FastAPI
+python -m pip install sqlalchemy # ORM para la base de datos SQLite (registro de evaluaciones)
+python -m pip install gradio # interfaz de chat del agente
+python -m pip install requests # el agente llama a la API por HTTP
+python -m pip install langchain-ollama # conecta LangChain con Qwen corriendo en Ollama
+```
+## Levantar Jupyter
+
+```bash
+jupyter notebook
 ```
 
 ## Entreno del modelo ('train_model.ipynb')
